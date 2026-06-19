@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samwel Muiruri | ICT Professional Portfolio</title>
+    <meta name="author" content="Samwel Muiruri">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header id="main-view">
+        <div class="video-container">
+            <div class="video-overlay"></div>
+            <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1&loop=1&playlist=tgbNymZ7vqY&controls=0&showinfo=0&rel=0&modestbranding=1" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+
+        <div class="container view-content">
+            <nav>
+                <img src="image used/my pecture.jpg" class="logo" alt="Samwel Muiruri Logo">
+                <ul id="sidemenu">
+                    <li><a href="#" class="nav-trigger active-nav" onclick="switchView(event, 'home')">Home</a></li>
+                    <li><a href="#" class="nav-trigger" onclick="switchView(event, 'about')">About</a></li>
+                    <li><a href="#" class="nav-trigger" onclick="switchView(event, 'services')">Services</a></li>
+                    <li><a href="#" class="nav-trigger" onclick="switchView(event, 'portfolio')">Portfolio</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            
+            <div class="dynamic-window">
+                
+                <div id="view-home" class="view-layer active-layer">
+                    <div class="row home-flex-container">
+                        
+                        <div class="header-text">
+                            <div id="what-i-do">
+                                <p><i class="fas fa-network-wired"></i> Networking Setup & Troubleshooting</p>      
+                                <p><i class="fas fa-microchip"></i> Electronics & Circuit Design</p>
+                                <p><i class="fas fa-laptop-code"></i> Computer Software Expert</p>
+                                <p><i class="fas fa-code"></i> UI/UX & Web Developer</p>
+                            </div>
+                            <h1>Hi, I am <span>Samwel</span><br>from Kenya</h1>
+                        </div>
+
+                        <div class="journey-video-box">
+                            <h3 class="video-section-title">
+                                <i class="fas fa-graduation-cap"></i> My Technical Journey
+                            </h3>
+                            <div class="video-wrapper">
+                                <iframe 
+                                    src="https://www.youtube.com/embed/iURPY28jOD4" 
+                                    title="Journey of a Computer Science Student"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div id="view-about" class="view-layer">
+                    <div class="row">
+                        <div class="about-col-1">
+                            <img src="image used/study.jpg.jpg" alt="Samwel Muiruri">
+                            <div class="quick-nav-badge">
+                                <h4>Explore Work Directly</h4>
+                                <div class="badge-icons">
+                                    <a href="#" onclick="switchView(event, 'services')" title="View Services"><i class="fas fa-concierge-bell"></i></a>
+                                    <a href="#" onclick="switchView(event, 'portfolio')" title="See Projects"><i class="fas fa-briefcase"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="about-col-2">
+                            <h1 class="sub-title">About Me</h1>
+                            <p class="subtitle-profile"><strong>Lead ICT Technician & Level 6 ICT Diploma Student</strong></p>
+                            <p class="about-description">
+                                I bridge strict academic frameworks with practical infrastructure troubleshooting, security implementation configurations, and logical system software design routines.
+                            </p>
+                            <div class="tab-titles">
+                                <p class="tab-links active-link" onclick="opentab(event, 'knowledge')">ICT Knowledge</p>
+                                <p class="tab-links" onclick="opentab(event, 'experience')">Experience</p>
+                            </div>
+                            <div class="tab-contents active-tab" id="knowledge">
+                                <ul class="knowledge-list">
+                                    <li><span>Networking Essentials</span><br>Skilled in understanding structural topologies, physical transport constraints (CSMA/CD), and managing functional LAN infrastructure logic routing setups.</li>
+                                    <li><span>Architecture & Security Layers</span><br>Familiar with computational registers, system memory tier structures, and custom endpoint protection modes utilizing registry shield defenses.</li>
+                                    <li><span>Databases & Logic Flow</span><br>Proficient parsing relational modeling schemas, structural functional consistency rules, and clean algorithm flowchart development logic sets.</li>
+                                </ul>
+                            </div>
+                            <div class="tab-contents" id="experience">
+                                <ul>
+                                    <li><span>2025 - 2026</span><br><strong>Lead ICT Technician & Studio Lead</strong><br>Supervised infrastructure hardware deployments, configuration scripts, and operational system verification frameworks.</li>
+                                    <li><span>Present</span><br><strong>Independent Custom Script Contracts</strong><br>Developing responsive web layers, administrative backend databases, and interactive scripts.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="view-services" class="view-layer">
+                    <h1 class="sub-title">My Services</h1>
+                    <div class="service-list">
+                        <div>
+                            <i class="fa-solid fa-code"></i>
+                            <h2>Web Design</h2>
+                            <p>Creating highly-optimized, modern, responsive websites built securely and tailored to complex systems backends.</p>
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-network-wired"></i>
+                            <h2>Network Architecture</h2>
+                            <p>Designing, configuring, maintaining, and repairing localized network structures, routing environments, and Wi-Fi configurations.</p>
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-shield-halved"></i>
+                            <h2>Technical Protection</h2>
+                            <p>Deploying dedicated baseline security layers, configuring registry-level protection shields, and conducting proactive software mitigation scans.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="view-portfolio" class="view-layer">
+                    <h1 class="sub-title">My Work</h1>
+                    <div class="work-list">
+                        <div class="work">
+                            <img src="image used/computer software image.jpg" alt="Software Processing">
+                            <div class="layer">
+                                <h3>Systems Software Processing</h3>
+                                <p>Specializing in computational logic models, data tracking software architectures, and procedural development validation frameworks.</p>
+                                <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                        <div class="work">
+                            <img src="image used/computer network .jpg" alt="Network Infrastructure">
+                            <div class="layer">
+                                <h3>Network Engineering</h3>
+                                <p>Modular layout topology builds, structure mapping profiles, and active link failure recovery diagnostics utilizing standard enterprise equipment lines.</p>
+                                <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                        <div class="work">
+                            <img src="image used/electronic images.jpg" alt="Electronics Design">
+                            <div class="layer">
+                                <h3>Electronics & Prototyping</h3>
+                                <p>Hardware layout tracking diagrams, circuit pathway prototyping blueprints, and standard hardware-software system controller configuration setups.</p>
+                                <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <section id="contact-footer">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fas fa-paper-plane"></i> sameelheritage@gmail.com</p>
+                    <p><i class="fas fa-phone"></i> 0717114899</p>
+                    <div class="social-icon">
+                        <a href="#" aria-label="Facebook Profile"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Twitter Feed"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram Gallery"><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <a href="data/CV.pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="contact-form">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+                        <button type="submit" class="btn btn2">Submit Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copy-right">
+            <p>© 2026 Samwel Muiruri. All Rights Reserved. Systems Engineered for Performance.</p>
+        </div>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+</html>
