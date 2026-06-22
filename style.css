@@ -302,3 +302,8 @@ nav .fas { display: none; }
     nav ul li { display: block; margin: 20px; }
     nav ul .fas { position: absolute; top: 20px; left: 20px; }
 }
+#msg{
+    color: #61b752;
+    margin-top: 40px;
+    display: block;
+}

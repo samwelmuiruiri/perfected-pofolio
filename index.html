@@ -14,7 +14,13 @@
     <header id="main-view">
         <div class="video-container">
             <div class="video-overlay"></div>
-            <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1&loop=1&playlist=tgbNymZ7vqY&controls=0&showinfo=0&rel=0&modestbranding=1" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1&loop=1&playlist=tgbNymZ7vqY&controls=0&showinfo=0&rel=0&modestbranding=1" allow="autoplay; encrypted-media"
+             allowfullscreen></iframe>
+             <video width="640" height="360" controls>
+  <source src="https://www.youtube.com/watch?v=42u_2e6eNF4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
         </div>
 
         <div class="container view-content">
@@ -55,6 +61,7 @@
                                     title="Journey of a Computer Science Student"
                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                                     allowfullscreen>
+                                    <video src=""></video>
                                 </iframe>
                             </div>
                         </div>
@@ -171,12 +178,13 @@
                     <a href="data/CV.pdf" download class="btn btn2">Download CV</a>
                 </div>
                 <div class="contact-right">
-                    <form name="contact-form">
+                    <form name="submit-to-google-sheet" name="contact-form">
                         <input type="text" name="Name" placeholder="Your Name" required>
                         <input type="email" name="Email" placeholder="Your Email" required>
                         <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
                         <button type="submit" class="btn btn2">Submit Message</button>
                     </form>
+                    <span id="msg"> </span>
                 </div>
             </div>
         </div>
@@ -186,5 +194,23 @@
     </section>
 
     <script src="app.js"></script>
+    <script>
+	const scriptURL = 'https://script.google.com/macros/s/AKfycbzPMRFmHUc_ro1yuTemqKS2X9xebOvKnsPzlkVNiINPSiwe5nuW3EHH9-bHZhukBkW0/exec'
+	const form = document.forms['submit-to-google-sheet']
+    const msg=document.getElementById("msg")
+
+	form.addEventListener('submit', e => {
+		e.preventDefault()
+		fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+			.then(response => response.json())
+			.then(response => {
+                msg.innerText="message sent seccessfuly"
+                setTimeout(function(){
+               },5000)
+               form.reset()
+            })
+			.catch(error => console.error('Error!', error.message))
+	})
+</script>
 </body>
 </html>
